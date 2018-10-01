@@ -1,0 +1,27 @@
+<div class="container">
+  <header class="header ">
+    <div class="title row justify-content-center">
+      <h1>Pet Store</h1>
+    </div>
+    <nav class="navbar">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.active]="isActive('/pet')"
+             [routerLink]="['/pet']">List of pets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.active]="isActive('/pet/create')"
+             [routerLink]="['/pet/create']">Create a pet</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <app-alerts></app-alerts>
+    <router-outlet></router-outlet>
+  </section>
+  <footer></footer>
+
+</div>
